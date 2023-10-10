@@ -7,7 +7,7 @@
     "dev": "bunx vite",
     "build": "tsc && bunx vite build",
     "preview": "vite preview",
-    "pre-commit": "npx lint-staged",
+    "pre-commit": "bun lint-staged",
     "ladle:dev": "bunx ladle serve",
     "ladle:build": "bunx ladle build",
     "ladle:preview": "ladle preview",
