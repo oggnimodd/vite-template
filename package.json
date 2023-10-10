@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "bunx --bun vite",
-    "build": "tsc && bunx --bun vite build",
+    "dev": "bunx vite",
+    "build": "tsc && bunx vite build",
     "preview": "vite preview",
     "pre-commit": "npx lint-staged",
-    "ladle:dev": "bunx --bun ladle serve",
-    "ladle:build": "bunx --bun ladle build",
+    "ladle:dev": "bunx ladle serve",
+    "ladle:build": "bunx ladle build",
     "ladle:preview": "ladle preview",
     "lint": "biome check .",
     "lint:apply": "biome check --apply .",
@@ -19,14 +19,16 @@
   },
   "dependencies": {
     "@ladle/react": "^2.17.2",
+    "@nextui-org/react": "^2.1.13",
+    "framer-motion": "^10.16.4",
     "husky": "^8.0.3",
-    "jotai": "^2.4.2",
     "lint-staged": "^13.2.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zustand": "^4.4.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.1.2",
+    "@biomejs/biome": "1.2.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react-swc": "^3.3.2",

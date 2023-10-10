@@ -18,14 +18,7 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./src",
     "paths": {
-      "components/*": ["./src/components/*"],
-      "utils/*": ["./src/utils/*"],
-      "layouts/*": ["./src/layouts/*"],
-      "stores/*": ["./src/stores/*"],
-      "types/*": ["./src/types/*"],
-      "config/*": ["./src/config/*"],
-      "hooks/*": ["./src/hooks/*"],
-      "atoms/*": ["./src/atoms/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"],
