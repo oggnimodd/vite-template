@@ -15,7 +15,7 @@
     "lint:apply": "biome check --apply .",
     "format": "biome format .",
     "format:fix": "biome format --write .",
-    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\""
+    "prepare": "bun prepare.js"
   },
   "dependencies": {
     "@ladle/react": "^2.17.2",
@@ -41,6 +41,9 @@
     "vitest": "^0.34.4"
   },
   "lint-staged": {
-    "**/*.{js,ts,jsx,tsx}": ["biome check --apply .", "biome format --write ."]
+    "**/*.{js,ts,jsx,tsx}": [
+      "biome check --apply .",
+      "biome format --write ."
+    ]
   }
 }
