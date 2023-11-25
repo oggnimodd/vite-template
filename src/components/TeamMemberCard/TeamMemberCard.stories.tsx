@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 
 export const Default: Story = () => {
   return (
-    <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="pt-16 container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {Array.from({ length: 8 }).map(() => (
         <TeamMemberCard
           key={nanoid()}
