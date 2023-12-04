@@ -1,15 +1,27 @@
 import { create } from "zustand";
+import { immer } from "zustand/middleware/immer";
 
-type Store = {
+type State = {
   count: number;
+};
+
+type Actions = {
   increment: () => void;
   decrement: () => void;
 };
 
-const useCountStore = create<Store>((set) => ({
-  count: 0,
-  increment: () => set((state) => ({ count: state.count + 1 })),
-  decrement: () => set((state) => ({ count: state.count - 1 })),
-}));
+const useCountStore = create<State & Actions>()(
+  immer((set) => ({
+    count: 0,
+    increment: () =>
+      set((state) => {
+        state.count += 1;
+      }),
+    decrement: () =>
+      set((state) => {
+        state.count -= 1;
+      }),
+  })),
+);
 
 export default useCountStore;

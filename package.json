@@ -24,6 +24,7 @@
     "@nextui-org/react": "^2.1.13",
     "@vitejs/plugin-react": "^4.2.0",
     "framer-motion": "^10.16.4",
+    "immer": "^10.0.3",
     "lucide-react": "^0.293.0",
     "nanoid": "^5.0.3",
     "react": "^18.2.0",
