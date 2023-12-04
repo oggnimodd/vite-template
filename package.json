@@ -15,7 +15,8 @@
     "lint:apply": "biome check --apply .",
     "format": "biome format .",
     "format:fix": "biome format --write .",
-    "prepare": "bun prepare.js"
+    "prepare": "bun prepare.js",
+    "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
   },
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
