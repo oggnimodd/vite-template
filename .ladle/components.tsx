@@ -1,23 +1,30 @@
 import React, { useLayoutEffect } from "react";
 import type { GlobalProvider } from "@ladle/react";
+import ComponentsProvider from "../src/Provider";
+import { useThemeStore } from "../src/stores";
 
 import "../src/styles/index.css";
 import "./ladle.css";
 
 export const Provider: GlobalProvider = ({ children, globalState }) => {
   const theme = globalState.theme;
+  const { theme: componentsTheme, toggleTheme } = useThemeStore.getState();
 
   useLayoutEffect(() => {
-    const body = document.body;
+    if (componentsTheme !== theme) {
+      toggleTheme();
+    }
+
+    const root = window.document.documentElement;
 
     if (theme === "dark") {
-      body.classList.remove("light");
-      body.classList.add("dark");
+      root.classList.remove("light");
+      root.classList.add("dark");
     } else if (theme === "light") {
-      body.classList.remove("dark");
-      body.classList.add("light");
+      root.classList.remove("dark");
+      root.classList.add("light");
     }
   }, [theme]);
 
-  return <div className={theme}>{children}</div>;
+  return <ComponentsProvider>{children}</ComponentsProvider>;
 };
