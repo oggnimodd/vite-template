@@ -1,5 +1,5 @@
 import { Counter } from "components";
-import { Button } from "@nextui-org/react";
+import { Button } from "antd";
 import { useDarkMode } from "hooks";
 import { Sun, Moon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -9,15 +9,22 @@ const Home = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="self-end flex p-4 gap-3">
+      <div className="self-end flex p-4 gap-3 flex items-center">
         <Link to="/404">Go to 404</Link>
         <Button
-          isIconOnly
+          size="large"
+          type="primary"
           onClick={toggleTheme}
-          startContent={isDark ? <Sun /> : <Moon />}
+          icon={isDark ? <Sun size={18} /> : <Moon size={18} />}
+          shape="circle"
         />
       </div>
       <Counter />
+      <div className="flex justify-center py-10">
+        <Link to="/about">
+          <Button type="primary">Go to About</Button>
+        </Link>
+      </div>
     </div>
   );
 };

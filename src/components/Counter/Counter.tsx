@@ -1,5 +1,7 @@
-import { Button } from "@nextui-org/react";
+import { Button, Typography } from "antd";
 import { useCountStore } from "stores";
+
+const { Text } = Typography;
 
 const Counter = () => {
   const count = useCountStore((state) => state.count);
@@ -7,13 +9,13 @@ const Counter = () => {
 
   return (
     <div className="w-full flex items-center justify-center flex-col gap-3">
-      <span className="text-2xl font-bold">{count}</span>
+      <Text className="text-2xl font-bold">{count}</Text>
       <div className="flex gap-x-3">
-        <Button color="primary" onPress={decrement}>
+        <Button type="primary" onClick={decrement}>
           {" "}
           Count Down
         </Button>
-        <Button color="primary" onPress={increment}>
+        <Button type="primary" onClick={increment}>
           {" "}
           Count Up
         </Button>

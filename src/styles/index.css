@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  @apply dark:bg-[#141414] bg-white;
+}
+
+/* Override base SVG style to work with Ant Design if using external icon sets */
+svg {
+  vertical-align: initial;
+}
+
+img {
+  display: unset !important;
+}
+
+/* React router dom link default style */
+a:not(.ant-typography) {
+  @apply text-blue-500 no-underline;
+}
+
+/* Center antd circle button */
+button.ant-btn.ant-btn-circle {
+  @apply flex items-center justify-center;
+}
