@@ -15,7 +15,7 @@
     "lint:apply": "biome check --apply .",
     "format": "biome format .",
     "format:fix": "biome format --write .",
-    "prepare": "bun prepare.js",
+    "prepare": "bun ./scripts/prepare.js",
     "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "@tanstack/react-query": "^5.12.2",
     "@vitejs/plugin-react": "^4.2.0",
     "axios": "^1.6.2",
+    "bun-types": "^1.0.15",
     "framer-motion": "^10.16.4",
     "immer": "^10.0.3",
     "lucide-react": "^0.293.0",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
+    "@types/node": "^20.10.4",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react-swc": "^3.3.2",
