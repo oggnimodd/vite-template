@@ -7,7 +7,7 @@ const useTheme = () => {
   const isDark = theme === "dark";
 
   useEffect(() => {
-    const root = window.document.documentElement;
+    const root = window.document.body;
     root.classList.remove(theme === "dark" ? "light" : "dark");
     root.classList.add(theme);
   }, [theme]);

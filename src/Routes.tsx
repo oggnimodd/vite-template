@@ -1,4 +1,4 @@
-import { Home, NotFound } from "pages";
+import { Home, About, NotFound } from "pages";
 import { Routes as ReactRouterRoutes, Route } from "react-router-dom";
 
 interface Page {
@@ -10,6 +10,10 @@ const routes = [
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
   {
     path: "*",

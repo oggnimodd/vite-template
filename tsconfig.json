@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "types": ["bun-types", "node"],
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
+   "esModuleInterop": true,
     "skipLibCheck": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -22,7 +22,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "types"],
   "references": [
     {
       "path": "./tsconfig.node.json"

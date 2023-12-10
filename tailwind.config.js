@@ -1,15 +1,16 @@
-const { nextui } = require("@nextui-org/react");
+const { createThemes } = require("tw-colors");
+const { materialTailwindColors } = require("./tailwind");
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
+  important: "#html-tag",
   darkMode: "class",
-  plugins: [nextui()],
+  corePlugins: {
+    preflight: false, // for antd compatibility
+  },
+  plugins: [createThemes(materialTailwindColors)],
 };
