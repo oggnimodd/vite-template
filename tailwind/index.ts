@@ -1,0 +1,1 @@
+export { tailwindAntdColors } from "./AntdColors";

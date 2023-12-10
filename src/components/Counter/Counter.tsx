@@ -20,6 +20,13 @@ const Counter = () => {
           Count Up
         </Button>
       </div>
+      <div className="flex gap-x-2 mt-4">
+        <div className="w-10 h-10 bg-blue-6 rounded-xl" />
+        <div className="w-10 h-10 bg-purple-6 rounded-xl" />
+        <div className="w-10 h-10 bg-magenta-6 rounded-xl" />
+        <div className="w-10 h-10 bg-green-6 rounded-xl" />
+        <div className="w-10 h-10 bg-yellow-6 rounded-xl" />
+      </div>
     </div>
   );
 };
